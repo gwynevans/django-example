@@ -1,0 +1,22 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}New School{% endblock %}
+
+{% block body_block %}
+<div class="container-fluid">
+    <div class="row">
+        <h1>
+            Delete school {{ school.name }}
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <form method="post" class="form">
+                {% csrf_token %}
+                <a href="{% url 'myapp:detail' school.pk %}" class="btn btn-default">Cancel</a>
+                <input type="submit" class="btn btn-danger" value="Confirm Delete">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

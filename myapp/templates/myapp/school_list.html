@@ -3,12 +3,21 @@
 {% block title %}School List{% endblock %}
 
 {% block body_block %}
+<div class="container-fluid">
+    <div class="row">
+        <h1>List of schools</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <ul class="list-group">
+                {% for school in schools %}
+                <li class="list-group-item"><a href="{{ school.id }}">{{ school.name }}</a></li>
+                {% endfor %}
+            </ul>
+            <a class="btn btn-success" href="{% url 'myapp:create'%}">Add School</a>
+        </div>
+    </div>
+</div>
 
-<h1>List of schools</h1>
-<ol>
-    {% for school in schools %}
-    <li><a href="{{ school.id }}">{{ school.name }}</a></li>
-    {% endfor %}
-</ol>
 
 {% endblock %}

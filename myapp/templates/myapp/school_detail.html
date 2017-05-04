@@ -20,5 +20,10 @@
     </li>
 </ol>
 </div>
-
+<div class="container">
+    <p>
+        <a class="btn btn-warning" href="{% url 'myapp:update' pk=school.pk %}">Update</a>
+        <a class="btn btn-danger"  href="{% url 'myapp:delete' pk=school.pk %}">Delete</a>
+    </p>
+</div>
 {% endblock %}

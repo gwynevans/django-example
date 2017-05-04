@@ -1,3 +1,6 @@
+# django-example
 
+A very basic Django web-app (taken from the ["Python and Django Full Stack Web Developer
+Bootcamp"](https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp))
 
-Used "python manage.py createsuperuser" to create admin/adminpassword
+Includes examples of ListView, DetailView, CreateView, UpdateView and DeleteView, as well as Admin pages.
